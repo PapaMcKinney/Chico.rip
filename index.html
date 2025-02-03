@@ -11,11 +11,12 @@
             overflow: hidden;
             height: 100vh;
             background-image: url('IMG_3714.JPEG');
-            background-size: cover;
+            background-size: contain;  /* Ensures the image fits within the screen */
             background-position: center;
+            background-repeat: no-repeat; /* Prevents repeating the background image */
             display: flex;
             justify-content: center;
-            align-items: flex-start; 
+            align-items: flex-start; /* Align items to the top */
             font-family: 'Arial', sans-serif;
         }
 
@@ -28,7 +29,7 @@
             letter-spacing: 5px;
             text-shadow: 0 0 10px #ff6600, 0 0 20px #ff6600, 0 0 30px #ff6600, 0 0 40px #ff6600;
             z-index: 10;
-            margin-top: 20px; 
+            margin-top: 20px; /* Add margin to move the text down a little */
         }
 
         .background-image {
@@ -80,6 +81,7 @@
     <img class="background-image" src="IMG_3714.JPEG" alt="Chico the Cat" />
     <h1>In Loving Memory of Chico the Cat</h1>
 
+    <!-- Audio element with autoplay, loop, and volume control -->
     <audio autoplay loop controls>
         <source src="[FREE] Sad Acoustic Guitar Type Beat _ Pop Instrumental _ _i luv u_ 0.mp3" type="audio/mp3">
         Your browser does not support the audio element.
