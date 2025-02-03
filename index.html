@@ -18,37 +18,32 @@
             justify-content: center;
             align-items: center;
             font-family: 'Arial', sans-serif;
+            animation: fadeInBackground 4s ease-in-out;
+        }
+
+        
+        @keyframes fadeInBackground {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
         }
 
         
         h1 {
-            font-size: 3em;
+            font-size: 3.5em;
             color: white;
             font-weight: bold;
             text-align: center;
             text-transform: uppercase;
             letter-spacing: 5px;
-            animation: pulsate 1.5s infinite alternate;
-            z-index: 10;
+            text-shadow: 0 0 10px #ff6600, 0 0 20px #ff6600, 0 0 30px #ff6600, 0 0 40px #ff6600;
+            z-index: 10; 
         }
 
-       
-        @keyframes pulsate {
-            0% {
-                text-shadow: 0 0 10px #ff6600, 0 0 20px #ff6600, 0 0 30px #ff6600, 0 0 40px #ff6600;
-                transform: scale(1);
-            }
-            50% {
-                text-shadow: 0 0 20px #ff6600, 0 0 40px #ff6600, 0 0 60px #ff6600, 0 0 80px #ff6600;
-                transform: scale(1.1);
-            }
-            100% {
-                text-shadow: 0 0 30px #ff6600, 0 0 60px #ff6600, 0 0 90px #ff6600, 0 0 120px #ff6600;
-                transform: scale(1);
-            }
-        }
-
-       
+        
         .background-image {
             position: absolute;
             top: 0;
@@ -56,12 +51,71 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            z-index: -1;
+            z-index: -1; 
+            filter: blur(5px); 
         }
+
+        
+        .memory-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            background-color: #ff6600;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: none; 
+            animation: glow 1.5s infinite alternate;
+        }
+
+        
+        @keyframes glow {
+            0% {
+                box-shadow: 0 0 10px #ff6600;
+            }
+            50% {
+                box-shadow: 0 0 20px #ff6600;
+            }
+            100% {
+                box-shadow: 0 0 30px #ff6600;
+            }
+        }
+
+        .memory-button:hover {
+            background-color: #e55a00;
+        }
+
     </style>
 </head>
 <body>
+    
     <img class="background-image" src="IMG_3714.JPEG" alt="Chico the Cat" />
     <h1>In Loving Memory of Chico the Cat</h1>
+
+    
+    <audio autoplay loop controls>
+        <source src="[FREE] Sad Acoustic Guitar Type Beat _ Pop Instrumental _ _i luv u_ 0.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+   
+    <button class="memory-button" onclick="window.location.href='https://www.example.com'">Share a Memory of Chico</button>
+
+    <script>
+        
+        window.onscroll = function() {
+            var button = document.querySelector('.memory-button');
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                button.style.display = 'block'; 
+            } else {
+                button.style.display = 'none'; 
+            }
+        };
+    </script>
 </body>
 </html>
