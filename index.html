@@ -3,10 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chico's Cat Picture</title>
+    <title>In Loving Memory of Chico</title>
+    <style>
+        @keyframes glitter {
+          0% { color: #ff99cc; text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff, 0 0 15px #ff00ff; }
+          25% { color: #66ccff; text-shadow: 0 0 5px #66ccff, 0 0 10px #66ccff, 0 0 15px #66ccff; }
+          50% { color: #ffcc00; text-shadow: 0 0 5px #ffcc00, 0 0 10px #ffcc00, 0 0 15px #ffcc00; }
+          75% { color: #ff3366; text-shadow: 0 0 5px #ff3366, 0 0 10px #ff3366, 0 0 15px #ff3366; }
+          100% { color: #ff99cc; text-shadow: 0 0 5px #ff99cc, 0 0 10px #ff99cc, 0 0 15px #ff99cc; }
+        }
+
+        .glitter {
+          font-size: 3em;
+          font-family: 'Arial', sans-serif;
+          font-weight: bold;
+          animation: glitter 1.5s infinite alternate;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to Chico's World!</h1>
+    <h1 class="glitter">In Loving Memory of Chico 🐾</h1>
     <img src="IMG_3714.JPEG" alt="Chico the Cat" style="width:100%; max-width:500px;">
 </body>
 </html>
